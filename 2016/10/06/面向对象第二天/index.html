@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>面向对象的特征、继承、原型链. | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="面向对象的三大特性
+封装 : 将复杂的实现过程包装，隐藏起来，然后提供给用户使用的接口即可。优点： 
+实现了代码的复用;
+保持函数或者对象功能的单一性，便于日后维护。
+
+
+继承 :
+在JS中，继承指的是对象之间的关系。
+在面向对象的语言中，继承指的是类之间的关系。
+实质：构造函数和类都是实例化对象的模板。
+概念：就是指一个对象有权去访问另一个对象的成员。在JS中，只要让一个对象去访问另一个对象的成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象的特征、继承、原型链.">
+<meta property="og:url" content="http://yoursite.com/2016/10/06/面向对象第二天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="面向对象的三大特性
+封装 : 将复杂的实现过程包装，隐藏起来，然后提供给用户使用的接口即可。优点： 
+实现了代码的复用;
+保持函数或者对象功能的单一性，便于日后维护。
+
+
+继承 :
+在JS中，继承指的是对象之间的关系。
+在面向对象的语言中，继承指的是类之间的关系。
+实质：构造函数和类都是实例化对象的模板。
+概念：就是指一个对象有权去访问另一个对象的成员。在JS中，只要让一个对象去访问另一个对象的成">
+<meta property="og:updated_time" content="2016-10-06T11:26:30.369Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面向对象的特征、继承、原型链.">
+<meta name="twitter:description" content="面向对象的三大特性
+封装 : 将复杂的实现过程包装，隐藏起来，然后提供给用户使用的接口即可。优点： 
+实现了代码的复用;
+保持函数或者对象功能的单一性，便于日后维护。
+
+
+继承 :
+在JS中，继承指的是对象之间的关系。
+在面向对象的语言中，继承指的是类之间的关系。
+实质：构造函数和类都是实例化对象的模板。
+概念：就是指一个对象有权去访问另一个对象的成员。在JS中，只要让一个对象去访问另一个对象的成">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-面向对象第二天" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/06/面向对象第二天/" class="article-date">
+  <time datetime="2016-10-06T00:58:08.000Z" itemprop="datePublished">2016-10-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象的特征、继承、原型链.
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="面向对象的三大特性"><a href="#面向对象的三大特性" class="headerlink" title="面向对象的三大特性"></a>面向对象的三大特性</h4><ol>
+<li>封装 : 将复杂的实现过程包装，隐藏起来，然后提供给用户使用的接口即可。<br>优点： <ol>
+<li>实现了代码的复用;</li>
+<li>保持函数或者对象功能的单一性，便于日后维护。</li>
+</ol>
+</li>
+<li>继承 :<ul>
+<li>在JS中，继承指的是<strong>对象</strong>之间的关系。</li>
+<li>在面向对象的语言中，继承指的是<strong>类</strong>之间的关系。</li>
+<li>实质：构造函数和类都是实例化对象的模板。</li>
+<li>概念：就是指一个对象有权去访问另一个对象的成员。<pre><code>在JS中，只要让一个对象去访问另一个对象的成员，就必须建立继承关系。
+任何对象都继承自它自己的原型对象
+</code></pre></li>
+</ul>
+</li>
+<li><p>多态<br> 概念：在父类中的同一方法在各个子类中的实现行为不同。</p>
+<h4 id="继承的实现方式有两种实现的方式："><a href="#继承的实现方式有两种实现的方式：" class="headerlink" title="继承的实现方式有两种实现的方式："></a>继承的实现方式有两种实现的方式：</h4><ol>
+<li>基于原型</li>
+</ol>
+<ul>
+<li><p>扩展原型：在原有的原型上进行相应的扩展，实现继承。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">   function A()&#123;</div><div class="line">   &#125;</div><div class="line">   var a = new A;</div><div class="line">   A.prototype.printA = function()&#123;</div><div class="line">     console.log(&apos;a&apos;);</div><div class="line">   &#125;;</div><div class="line">   a.printA();</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>置换原型：置换原型:将要被继承的对象，直接替换掉原有的原型，实现继承</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">    	function parent() &#123;</div><div class="line">	this.name = &apos;tom&apos;;</div><div class="line">&#125;</div><div class="line">parent.prototype.printC = function() &#123;</div><div class="line">	console.log(&apos;c&apos;);</div><div class="line">	console.log(this.name);</div><div class="line">&#125;;</div><div class="line">function child() &#123;</div><div class="line">&#125;</div><div class="line">child.prototype = new parent;</div><div class="line">var c = new child;</div><div class="line">c.printC(); // c</div><div class="line">// c -&gt; parent实例 -&gt; parent.prototype</div><div class="line">var name = new child;</div><div class="line">var name = [1, 2, 3];</div><div class="line">console.log(typeof name);</div><div class="line">// 全局变量都是window对象的属性</div><div class="line">// window的name属性只能为字符串</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>拷贝继承：将指定对象上的所有成员拷贝一份，并添加到当前对象上。这种继承方式成为拷贝继承。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">var parent = &#123;</div><div class="line">	print: function() &#123;</div><div class="line">		console.log(&apos;i am &apos; + this.name);</div><div class="line">	&#125;,</div><div class="line">	name: &apos;parent&apos;</div><div class="line">&#125;;</div><div class="line">var child = &#123;</div><div class="line">	name: &apos;child&apos;</div><div class="line">&#125;;</div><div class="line">// 1: 遍历parent</div><div class="line">for (var k in parent) &#123;</div><div class="line">	// 2: 将parent对象上的成员添加到child上。</div><div class="line">	child[k] = parent[k];</div><div class="line">&#125;</div><div class="line">child.print();</div><div class="line">var parent1 = &#123;</div><div class="line">	print1: function() &#123;</div><div class="line">		console.log(&apos;print1&apos;);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line">for (var k in parent1) &#123;</div><div class="line">	// 2: 将parent对象上的成员添加到child上。</div><div class="line">	child[k] = parent1[k];</div><div class="line">&#125;</div><div class="line">// 封装</div><div class="line">// 封装为child对象一个方法extend，谁调用extend方法就是给谁实现继承。</div><div class="line">// </div><div class="line">child.print1();</div></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/06/面向对象第二天/" data-id="civ3l9w370005kwwlpyidyoru" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/11/04/ajax-md/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ajax
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/04/Canvas简介以及使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Canvas基础</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/11/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/04/ajax-md/">ajax</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/06/面向对象第二天/">面向对象的特征、继承、原型链.</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/04/Canvas简介以及使用/">Canvas基础</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/04/函数的介绍/">函数的介绍</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
