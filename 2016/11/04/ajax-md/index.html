@@ -5,16 +5,52 @@
     
     <title>ajax | wyx</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="你好">
+    <meta name="description" content="概念
+Ajax是Asynchronous Javascript和XML的简写 。即异步JavaScript和XML
+用途：动态刷新局部数据，无需卸载整个页面，从而带来更好的用户体验
+Ajax核心：XMLHttpRequest对象(简称XHR)
+我们使用ajax，主要有以下两个特性：
+
+
+
+
+向服务器端发送请求，而不用重新加载页面。
+从服务器端接收数据并处理。
+如何创建ajax1. 创建请求对象
+需">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ajax">
-<meta property="og:url" content="http://yoursite.com/2016/11/06/ajax/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/11/04/ajax-md/index.html">
 <meta property="og:site_name" content="wyx">
-<meta property="og:description" content="你好">
-<meta property="og:updated_time" content="2016-11-06T15:20:15.842Z">
+<meta property="og:description" content="概念
+Ajax是Asynchronous Javascript和XML的简写 。即异步JavaScript和XML
+用途：动态刷新局部数据，无需卸载整个页面，从而带来更好的用户体验
+Ajax核心：XMLHttpRequest对象(简称XHR)
+我们使用ajax，主要有以下两个特性：
+
+
+
+
+向服务器端发送请求，而不用重新加载页面。
+从服务器端接收数据并处理。
+如何创建ajax1. 创建请求对象
+需">
+<meta property="og:updated_time" content="2016-11-06T15:50:14.677Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax">
-<meta name="twitter:description" content="你好">
+<meta name="twitter:description" content="概念
+Ajax是Asynchronous Javascript和XML的简写 。即异步JavaScript和XML
+用途：动态刷新局部数据，无需卸载整个页面，从而带来更好的用户体验
+Ajax核心：XMLHttpRequest对象(简称XHR)
+我们使用ajax，主要有以下两个特性：
+
+
+
+
+向服务器端发送请求，而不用重新加载页面。
+从服务器端接收数据并处理。
+如何创建ajax1. 创建请求对象
+需">
     
 
     
@@ -209,7 +245,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-ajax" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-ajax-md" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -226,8 +262,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/11/06/ajax/">
-            <time datetime="2016-11-06T15:19:45.000Z" itemprop="datePublished">2016-11-06</time>
+        <a href="/2016/11/04/ajax-md/">
+            <time datetime="2016-11-04T05:34:36.000Z" itemprop="datePublished">2016-11-04</time>
         </a>
     </div>
 
@@ -242,7 +278,67 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h4 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h4>
+            <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
+<li>Ajax是Asynchronous Javascript和XML的简写 。即异步JavaScript和XML</li>
+<li>用途：动态刷新局部数据，无需卸载整个页面，从而带来更好的用户体验</li>
+<li>Ajax核心：XMLHttpRequest对象(简称XHR)<ul>
+<li>我们使用ajax，主要有以下两个特性：</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>向服务器端发送请求，而不用重新加载页面。</li>
+<li><p>从服务器端接收数据并处理。</p>
+<h2 id="如何创建ajax"><a href="#如何创建ajax" class="headerlink" title="如何创建ajax"></a>如何创建ajax</h2><h3 id="1-创建请求对象"><a href="#1-创建请求对象" class="headerlink" title="1. 创建请求对象"></a>1. 创建请求对象</h3><ul>
+<li>需要通过XMLHttpRequest实现使用JavaScript向服务器端发送一个HTTP请求。</li>
+<li>但是有兼容性问题，在IE中我们引入一个名为XMLHTTP的ActiveXObject实现与XMLHttpRequest相同的功能<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createRequest</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> xhr;</div><div class="line">      <span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest) &#123;</div><div class="line">          xhr = <span class="keyword">new</span> <span class="built_in">window</span>.XMLHttpRequest()</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">          xhr = <span class="keyword">new</span> <span class="built_in">window</span>.ActiveXObject(<span class="string">'XMLHTTP'</span>);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> xhr;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-格式化数据，如果每次都不想从缓存读取数据，给url添加一个随机数的参数"><a href="#2-格式化数据，如果每次都不想从缓存读取数据，给url添加一个随机数的参数" class="headerlink" title="2. 格式化数据，如果每次都不想从缓存读取数据，给url添加一个随机数的参数"></a>2. 格式化数据，如果每次都不想从缓存读取数据，给url添加一个随机数的参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function formatData(data) &#123;</div><div class="line">	var k,</div><div class="line">		ret = [];</div><div class="line">	for(k in data)&#123;</div><div class="line">		ret.push(window.encodeURIComponent(k) + &apos;=&apos; + </div><div class="line">			window.encodeURIComponent(data[k]));</div><div class="line">	&#125;</div><div class="line">	// 若每次都不想从服务器缓存读取数据，给url添加一个随机数的参数</div><div class="line">	ret.push((&apos;_=&apos; + Math.random()).replace(&apos;.&apos;,&apos;&apos;));</div><div class="line">	return ret.join(&apos;&amp;&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-向服务器发送请求"><a href="#3-向服务器发送请求" class="headerlink" title="3. 向服务器发送请求"></a>3. 向服务器发送请求</h3><ul>
+<li>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  	xhr.open(method,url,async);</div><div class="line">xhr.send(string);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>各参数详解：</p>
+<ul>
+<li>method ：请求的类型；GET 或 POST</li>
+<li>url ：文件在服务器上的位置</li>
+<li>async ：true（异步）或 false（同步）<h4 id="其中get和post的区别："><a href="#其中get和post的区别：" class="headerlink" title="其中get和post的区别："></a>其中get和post的区别：</h4></li>
+</ul>
+<ul>
+<li>get 提交没有请求体，<br>  get 提交发送到服务器端的请求的数据都在地址栏当中<br>  不安全,因为get 提交发送到服务器的数据都在地址栏当中<br>  所以请求发送的数据的大小有限制.</li>
+<li>post 有请求体，请求体的数据就是客户端发送到服务端的内容的参数数据.<br>  post 提交的数据都在请求体当中，相对来说安全<br>  post 提交对发送到服务器端的数据大小没有限制<br>  post 提交必须有一个请求头<br>  Content-Type:application/x-www-form-urlencoded<br>  以后假设表单提交，如果说要发送中文，最好我们都使用post<h4 id="异步-True-或-False？"><a href="#异步-True-或-False？" class="headerlink" title="异步 - True 或 False？"></a>异步 - True 或 False？</h4>AJAX 指的是异步 JavaScript 和 XML（Asynchronous JavaScript and XML）。<br>XMLHttpRequest 对象如果要用于 AJAX 的话，其 open() 方法的 async参数必须设置为 true：</li>
+</ul>
+<p>对于 web 开发人员来说，发送异步请求是一个巨大的进步。很多在服务器执行的任务都相当费时。AJAX 出现之前，这可能会引起应用程序挂起或停止。<br>通过 AJAX，JavaScript 无需等待服务器的响应，而是：</p>
+<ul>
+<li>在等待服务器响应时执行其他脚本</li>
+<li><p>当响应就绪后对响应进行处理</p>
+<h4 id="Async-false"><a href="#Async-false" class="headerlink" title="Async = false"></a>Async = false</h4><p>JavaScript会等到服务器响应就绪才继续执行。如果服务器繁忙或缓慢，应用程序会挂起或停止。</p>
+<h3 id="服务器响应"><a href="#服务器响应" class="headerlink" title="服务器响应"></a>服务器响应</h3><p>如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。</p>
+<h4 id="responseText-属性"><a href="#responseText-属性" class="headerlink" title="responseText 属性"></a>responseText 属性</h4><p>如果来自服务器的响应并非 XML，请使用 responseText 属性。<br>responseText 属性返回字符串形式的响应，因此您可以这样使用：</p>
+<h4 id="responseXML-属性"><a href="#responseXML-属性" class="headerlink" title="responseXML 属性"></a>responseXML 属性</h4><p>如果来自服务器的响应是 XML，而且需要作为 XML 对象进行解析，请使用 responseXML 属性：</p>
+<h3 id="onreadystatechange-事件"><a href="#onreadystatechange-事件" class="headerlink" title="onreadystatechange 事件"></a>onreadystatechange 事件</h3><p>当请求被发送到服务器时，我们需要执行一些基于响应的任务。<br>每当 readyState 改变时，就会触发 onreadystatechange 事件。<br>readyState 属性存有 XMLHttpRequest 的状态信息。</p>
+<ul>
+<li>onreadystatechange:存储函数（或函数名），每当readyState属性改变时，就会调用该函数。</li>
+<li>readyState:存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。</li>
+<li>0: 请求未初始化</li>
+<li>1: 服务器连接已建立</li>
+<li>2: 请求已接收</li>
+<li>3: 请求处理中</li>
+<li>4: 请求已完成，且响应已就绪</li>
+<li>status: 200: “OK”  , 404: 未找到页面<br>在 onreadystatechange 事件中，我们规定当服务器响应已做好被处理的准备时所执行的任务。<br>当 readyState 等于 4 且状态为 200 时，表示响应已就绪：<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">xhr.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"> 		<span class="keyword">if</span> (xhr.readyState==<span class="number">4</span> &amp;&amp; xhr.status==<span class="number">200</span>)&#123;</div><div class="line">   	<span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xhr.responseText;</div><div class="line">   	&#125;</div><div class="line"> 	&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="使用-Callback-函数"><a href="#使用-Callback-函数" class="headerlink" title="使用 Callback 函数"></a>使用 Callback 函数</h3><ul>
+<li>callback 函数是一种以参数形式传递给另一个函数的函数。<br>如果您的网站上存在多个 AJAX 任务，那么您应该为创建 XMLHttpRequest 对象编写一个 标准 的函数，并为每个 AJAX 任务调用该函数。</li>
+<li>该函数调用应该包含 URL 以及发生 onreadystatechange 事件时执行的任务（每次调用可能不尽相同）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function myFunction()&#123;</div><div class="line">loadXMLDoc(&quot;ajax_info.txt&quot;,function()&#123;</div><div class="line"> 		if (xhr.readyState==4 &amp;&amp; xhr.status==200)&#123;</div><div class="line">   		document.getElementById(&quot;myDiv&quot;).innerHTML=xhr.responseText;</div><div class="line">    		&#125;</div><div class="line"> 		&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
         
         </div>
         <footer class="article-footer">
@@ -252,7 +348,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/11/06/ajax/" data-id="civ6tnfrt0001z4wl8is2b0dp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/11/04/ajax-md/" data-id="civ6tnfrl0000z4wl0zw17tkc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -320,7 +416,7 @@
 
             
     
-        <a href="http://yoursite.com/2016/11/06/ajax/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/11/06/ajax/">Comments</a>
+        <a href="http://yoursite.com/2016/11/04/ajax-md/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/11/04/ajax-md/">Comments</a>
     
 
         </footer>
@@ -329,11 +425,15 @@
         
 <nav id="article-nav">
     
-    
-        <a href="/2016/11/04/ajax-md/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">ajax</div>
+        <a href="/2016/11/06/ajax/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    ajax
+                
+            </div>
         </a>
+    
     
 </nav>
 
@@ -454,9 +554,9 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'http://yoursite.com/2016/11/06/ajax/';
+            this.page.url = 'http://yoursite.com/2016/11/04/ajax-md/';
         
-        this.page.identifier = 'ajax';
+        this.page.identifier = 'ajax-md';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
