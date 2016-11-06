@@ -1,0 +1,654 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="####1. Canvas简介：
+
+概念：H5提供的一个新的标签元素。中文：画布
+Canvas是指可以在其上面通过脚本语言（通常为JS）绘制图形、图像以及制作动画的标签。
+本身不具备绘制能力，只是负责展示。
+在浏览器不支持canvas时，会将其当做dav标签来解析。
+在IE中，会将其当做文本节点来解析2. 基本使用
+创建一个画布
+1&amp;lt;canvas&amp;gt;在浏览器不支持canvas时，会显示这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Canvas基础">
+<meta property="og:url" content="http://yoursite.com/2016/10/04/Canvas简介以及使用/index.html">
+<meta property="og:site_name" content="wyx">
+<meta property="og:description" content="####1. Canvas简介：
+
+概念：H5提供的一个新的标签元素。中文：画布
+Canvas是指可以在其上面通过脚本语言（通常为JS）绘制图形、图像以及制作动画的标签。
+本身不具备绘制能力，只是负责展示。
+在浏览器不支持canvas时，会将其当做dav标签来解析。
+在IE中，会将其当做文本节点来解析2. 基本使用
+创建一个画布
+1&amp;lt;canvas&amp;gt;在浏览器不支持canvas时，会显示这">
+<meta property="og:updated_time" content="2016-11-04T09:40:54.100Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Canvas基础">
+<meta name="twitter:description" content="####1. Canvas简介：
+
+概念：H5提供的一个新的标签元素。中文：画布
+Canvas是指可以在其上面通过脚本语言（通常为JS）绘制图形、图像以及制作动画的标签。
+本身不具备绘制能力，只是负责展示。
+在浏览器不支持canvas时，会将其当做dav标签来解析。
+在IE中，会将其当做文本节点来解析2. 基本使用
+创建一个画布
+1&amp;lt;canvas&amp;gt;在浏览器不支持canvas时，会显示这">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/04/Canvas简介以及使用/"/>
+
+
+  <title> Canvas基础 | wyx </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">wyx</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            日程
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Canvas基础
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-04T13:27:07+08:00" content="2016-10-04">
+              2016-10-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>####1. Canvas简介：</p>
+<ul>
+<li>概念：H5提供的一个新的标签元素。中文：画布</li>
+<li>Canvas是指可以在其上面通过脚本语言（通常为JS）绘制图形、图像以及制作动画的标签。</li>
+<li>本身不具备绘制能力，只是负责展示。</li>
+<li>在浏览器不支持canvas时，会将其当做dav标签来解析。</li>
+<li>在IE中，会将其当做文本节点来解析<h4 id="2-基本使用"><a href="#2-基本使用" class="headerlink" title="2. 基本使用"></a>2. 基本使用</h4></li>
+<li><p>创建一个画布</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;canvas&gt;在浏览器不支持canvas时，会显示这段文本。&lt;<span class="regexp">/canvas&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>在创建一个画布是，如果没有指定宽和高，默认为300*150(px)</li>
+<li>用行内样式来指定canvas的宽和高；如果在非行内样式指定canvas的宽和高，会在默认值的基础上进行缩放。而在缩放时，并没有增加canvas内部的像素点的个数。</li>
+</ul>
+</li>
+<li><p>获取绘制工具</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 第一步：获取相应画布</span></div><div class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvasId'</span>);</div><div class="line"><span class="comment">// 第二步：获取该画布的绘制工具</span></div><div class="line"><span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d/WebGL'</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>getContext方法：参数为 ‘2d’ or ‘WebGL’<br>2d:  获取绘制平面图形的工具<br>WebGL: 获取绘制立体图形的工具</li>
+<li>在课程内，指学习绘制2D图形</li>
+<li>绘制工具是有归属的。只有画布自己的绘制工具 可以在本身上绘制图形、图像。</li>
+</ul>
+</li>
+<li>绘制工具的API方法<ul>
+<li>移动笔触 moveTo(x,y) x 确定点的<strong>横坐标</strong> ； y 确定点的<strong>纵坐标</strong> ；</li>
+<li>画线 lineTo(x,y) 从当前笔触所在点 连线 到 指定点。</li>
+</ul>
+</li>
+<li>绘制直线步骤<ul>
+<li>移动笔触 moveTo</li>
+<li>画线 lineTo</li>
+<li>描边 stroke 或 填充 fill</li>
+</ul>
+</li>
+<li>坐标系<ul>
+<li>原点 在cnavas的左上角；</li>
+<li>X轴： 在原点的水平方向；</li>
+<li>Y轴： 在原点的垂直方向；<h4 id="3-路径的概念"><a href="#3-路径的概念" class="headerlink" title="3. 路径的概念"></a>3. 路径的概念</h4></li>
+</ul>
+</li>
+<li>ctx.beginPath();开启路径</li>
+<li>ctx.closePath();闭合路径<ul>
+<li>将图形的起始点与终止点进行连线，形成一个封闭的的图形</li>
+<li>将自动处理封闭图形的锯齿</li>
+</ul>
+</li>
+<li>只有在需要开启新路径时调用beginPath;<br>在需要将图形闭合，形成封闭的图形，那么就可以调用closePath方法</li>
+<li>这两个图形并不一定成对出现</li>
+<li>除了stroke或fill开头的方法之外，都会绘制路径。此时需要手动调用该方法。<h4 id="4-线性相关的属性"><a href="#4-线性相关的属性" class="headerlink" title="4. 线性相关的属性"></a>4. 线性相关的属性</h4></li>
+<li>lineWidth：设置线宽</li>
+<li>strokeStyle：指定线条的颜色，值可以为 16进制、颜色字符串、rgb、rgba、渐变色</li>
+<li>fillStyle：设置填充颜色。</li>
+<li>lineCap：设置线段两端的样式<ul>
+<li>‘butt’: 默认线头的两端没有任何样式</li>
+<li>‘round’: 设置线段的两端为突出的圆角图形。</li>
+<li>‘square’:设置线段两端为突出的方形图形。</li>
+</ul>
+</li>
+<li>lineJoin：设置线段相交点的样式<ul>
+<li>‘round’: 圆角样式</li>
+<li>‘bevel’:平角样式</li>
+<li>‘miter’:尖角样式<h4 id="5-非零环绕原则"><a href="#5-非零环绕原则" class="headerlink" title="5. 非零环绕原则"></a>5. 非零环绕原则</h4></li>
+</ul>
+</li>
+<li>目的：确定某一区域是否需要填充</li>
+<li>描述：定义计数默认为0，从当前区域选取任意点，然后从该点到整个图形外部绘制一条射线。观察和这条射线相交的所有线段。<ul>
+<li>如果该相交的线段是顺时针穿过这条射线，那么计数+1； 如果是逆时针穿过那么计数 - 1；</li>
+<li>如果计数为0，那么就不填充该区域，</li>
+<li>如果计数非0，那么就填充该区域。</li>
+</ul>
+</li>
+<li>总结</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/04/git使用指南/" rel="next" title="ajax基础">
+                <i class="fa fa-chevron-left"></i> ajax基础
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/06/面向对象第二天/" rel="prev" title="面向对象的特征、继承、原型链.">
+                面向对象的特征、继承、原型链. <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Zero" />
+          <p class="site-author-name" itemprop="name">Zero</p>
+          <p class="site-description motion-element" itemprop="description">虫泣鸣.生生催人倦！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-基本使用"><span class="nav-number">1.</span> <span class="nav-text">2. 基本使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-路径的概念"><span class="nav-number">2.</span> <span class="nav-text">3. 路径的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-线性相关的属性"><span class="nav-number">3.</span> <span class="nav-text">4. 线性相关的属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-非零环绕原则"><span class="nav-number">4.</span> <span class="nav-text">5. 非零环绕原则</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zero</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
