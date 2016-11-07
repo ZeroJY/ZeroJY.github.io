@@ -685,153 +685,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/10/04/函数的介绍/" itemprop="url">
-                  函数的介绍
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-04T13:27:07+08:00" content="2016-10-04">
-              2016-10-04
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="Function的介绍"><a href="#Function的介绍" class="headerlink" title="Function的介绍"></a>Function的介绍</h4><ol>
-<li>创建函数的方式<ul>
-<li>声明式</li>
-<li>表达式</li>
-<li>构造函数：Function(arg1,arg2,…argN,body)所有参数的类型均为字符串;arg1,arg2,…argN为可选的参数列表，表示为生成函数的形参列表。</li>
-<li>body为必选参数，表示为生成函数的函数体部分。</li>
-</ul>
-</li>
-<li>由于函数也可以通过Function构造函数来创建，那么函数也是对象；具有 <code>__proto__</code> 属性。<h4 id="函数的原型链"><a href="#函数的原型链" class="headerlink" title="函数的原型链"></a>函数的原型链</h4><ul>
-<li>所有函数都是Function实例。</li>
-<li>所有的函数的构造函数为Function&gt;</li>
-<li>所有的函数的原型对象为Function.prototype.</li>
-</ul>
-<ul>
-<li>将函数成为函数对象</li>
-<li>其他对象成为普通对象^^<h4 id="arguments对象"><a href="#arguments对象" class="headerlink" title="arguments对象"></a>arguments对象</h4></li>
-</ul>
-</li>
-</ol>
-<ul>
-<li>arguments对象属性<ul>
-<li>length 实参个数</li>
-<li>callee </li>
-<li>返回正在执行的函数;应用在匿名函数递归调用;</li>
-</ul>
-</li>
-<li>函数相关属性<ul>
-<li>caller 返回调用当前函数的函数。</li>
-<li>length 记录形参的个数。</li>
-<li>name 函数的名字<h4 id="模拟函数重载"><a href="#模拟函数重载" class="headerlink" title="模拟函数重载"></a>模拟函数重载</h4></li>
-</ul>
-</li>
-<li>在其他的后台语言中，允许函数重载（当有重名函数时，可根据传递参数的个数不同将函数定义为不同的函数</li>
-<li>然而在JS中，不允许同名函数，因此我们可以模拟函数重载。<h4 id="递归调用"><a href="#递归调用" class="headerlink" title="递归调用"></a>递归调用</h4><ul>
-<li>概念：函数调用自身</li>
-<li>经典递归案例</li>
-</ul>
-<ul>
-<li>等差数列第n项值</li>
-<li>fibonacci数列第n项值<h4 id="词法作用域"><a href="#词法作用域" class="headerlink" title="词法作用域"></a>词法作用域</h4></li>
-</ul>
-<ul>
-<li>规定变量的作用域是由变量声明的位置决定，而不是由使用变量的位置决定。</li>
-<li>在词法作用域中，只有函数可以分割作用域。在函数内部是一个完整作用域。与外界隔离。</li>
-<li>也就是，在函数内部可以访问函数内部的数据；但是函数外部无法访问内部的数据。<h4 id="变量名（函数名）提升"><a href="#变量名（函数名）提升" class="headerlink" title="变量名（函数名）提升"></a>变量名（函数名）提升</h4></li>
-</ul>
-</li>
-<li>在js预解析阶段执行的操作。</li>
-<li>js是边解析边执行的。<br>####　在预解析阶段</li>
-<li>首先。分析代码语法，如果有代码语法错误，就直接抛出异常。</li>
-<li>其次，将变量名以及函数声明提升到当前作用域最顶端。<h4 id="in运算符"><a href="#in运算符" class="headerlink" title="in运算符"></a>in运算符</h4></li>
-<li><strong>规则</strong>：前面的属性名字，要用字符串来表示；如果为变量，那么会将变量的值隐式转换为字符串，然后去判断变量的值是否为制定对象的属性（可以为继承过来的属性）</li>
-<li><strong>注意</strong>：后面的参数必须为对象；否则会报错。</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/10/04/git使用指南/" itemprop="url">
                   ajax基础
                 </a>
@@ -893,6 +746,115 @@
  * B/S 构件组成,方面构件个别的更换,实现系统的无缝升级. 系统维护开销减到最小.用户从网上自己下载安装
    就可以实现升级. 
 </code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/04/函数的介绍/" itemprop="url">
+                  函数的介绍
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-04T13:27:07+08:00" content="2016-10-04">
+              2016-10-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="Function的介绍"><a href="#Function的介绍" class="headerlink" title="Function的介绍"></a>Function的介绍</h4><ol>
+<li>创建函数的方式<br>声明式<br>表达式<br>构造函数：Function(arg1,arg2,…argN,body)所有参数的类型均为字符串;arg1,arg2,…argN为可选的参数列表，表示为生成函数的形参列表。<br>body为必选参数，表示为生成函数的函数体部分。</li>
+<li>由于函数也可以通过Function构造函数来创建，那么函数也是对象；具有 <code>__proto__</code> 属性。<h4 id="函数的原型链"><a href="#函数的原型链" class="headerlink" title="函数的原型链"></a>函数的原型链</h4>所有函数都是Function实例。<br>所有的函数的构造函数为Function&gt;<br>所有的函数的原型对象为Function.prototype.<ul>
+<li>将函数成为函数对象</li>
+<li>其他对象成为普通对象^^<h4 id="arguments对象"><a href="#arguments对象" class="headerlink" title="arguments对象"></a>arguments对象</h4>arguments对象属性</li>
+<li>length 实参个数</li>
+<li>callee </li>
+<li>返回正在执行的函数;应用在匿名函数递归调用;<br>函数相关属性</li>
+<li>caller 返回调用当前函数的函数。</li>
+<li>length 记录形参的个数。</li>
+<li>name 函数的名字<h4 id="模拟函数重载"><a href="#模拟函数重载" class="headerlink" title="模拟函数重载"></a>模拟函数重载</h4>在其他的后台语言中，允许函数重载（当有重名函数时，可根据传递参数的个数不同将函数定义为不同的函数<br>然而在JS中，不允许同名函数，因此我们可以模拟函数重载。<h4 id="递归调用"><a href="#递归调用" class="headerlink" title="递归调用"></a>递归调用</h4>概念：函数调用自身<br>经典递归案例</li>
+<li>等差数列第n项值</li>
+<li>fibonacci数列第n项值<h4 id="词法作用域"><a href="#词法作用域" class="headerlink" title="词法作用域"></a>词法作用域</h4>规定变量的作用域是由变量声明的位置决定，而不是由使用变量的位置决定。<br>在词法作用域中，只有函数可以分割作用域。在函数内部是一个完整作用域。与外界隔离。<br>也就是，在函数内部可以访问函数内部的数据；但是函数外部无法访问内部的数据。<h4 id="变量名（函数名）提升"><a href="#变量名（函数名）提升" class="headerlink" title="变量名（函数名）提升"></a>变量名（函数名）提升</h4>在js预解析阶段执行的操作。<br>js是边解析边执行的。<br>####　在预解析阶段<br>首先。分析代码语法，如果有代码语法错误，就直接抛出异常。<br>其次，将变量名以及函数声明提升到当前作用域最顶端。<h4 id="in运算符"><a href="#in运算符" class="headerlink" title="in运算符"></a>in运算符</h4><strong>规则</strong>：前面的属性名字，要用字符串来表示；如果为变量，那么会将变量的值隐式转换为字符串，然后去判断变量的值是否为制定对象的属性（可以为继承过来的属性）<br><strong>注意</strong>：后面的参数必须为对象；否则会报错。</li>
+</ul>
+</li>
+</ol>
+
           
         
       
