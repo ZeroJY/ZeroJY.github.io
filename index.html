@@ -984,6 +984,134 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/04/绘制图像以及坐标轴的平移/" itemprop="url">
+                  绘制图像以及坐标轴的平移
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-04T13:27:07+08:00" content="2016-10-04">
+              2016-10-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="1-绘制图像drawImage"><a href="#1-绘制图像drawImage" class="headerlink" title="1. 绘制图像drawImage"></a>1. 绘制图像drawImage</h4><ul>
+<li>普通的渲染图像<ul>
+<li>ctx.drawImage(imgObj, x, y)</li>
+<li>在canvas的（x,y)位置上，渲染指定的imgObj图像</li>
+</ul>
+</li>
+<li>缩放绘制图像<ul>
+<li>ctx.drawImages(imgObj, x, y, width, height)</li>
+<li>在canvas的(x, y)位置上，根据指定的宽和高，来渲染imgObj图像</li>
+</ul>
+</li>
+<li>切片绘制图像<ul>
+<li>ctx.drawImage(imgObj, sx, sy, swidth, sheight, x, y, width, height)</li>
+<li>sx, sy, swidth, sheight : 在源图片上的sx，sy位置切片一个swidth宽、sheight高的图像。</li>
+<li>x, y, width, height ：将上一步切出来的图像绘制在canvas的x,y位置上，并且指定渲染的宽和高</li>
+</ul>
+</li>
+<li>尽量保持原图像的比例进行渲染图像。防止图像在渲染的时候发生变形。<h4 id="2-坐标系变换"><a href="#2-坐标系变换" class="headerlink" title="2. 坐标系变换"></a>2. 坐标系变换</h4></li>
+<li>ctx.translate(x, y) 平移坐标系<ul>
+<li>将坐标系的原点 平移到 指定的(x, y)这点。</li>
+</ul>
+</li>
+<li>ctx.rotate(radian)<ul>
+<li>以当前原点旋转坐标系到指定的弧度radian</li>
+<li>如果为负数，逆时针旋转</li>
+<li>如果为正数，顺时针旋转<h4 id="3-清除坐标系"><a href="#3-清除坐标系" class="headerlink" title="3. 清除坐标系"></a>3. 清除坐标系</h4></li>
+</ul>
+</li>
+<li>ctx.clearRect(x, y, w, h)<ul>
+<li>清除由x, y, w, h确定的矩形以内所有的图形。<h4 id="4-状态保存与恢复"><a href="#4-状态保存与恢复" class="headerlink" title="4. 状态保存与恢复"></a>4. 状态保存与恢复</h4></li>
+</ul>
+</li>
+<li>ctx.save() : 将上一次的状态保存起来</li>
+<li>ctx.restore(): 恢复最近一次保存的状态</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/04/函数的调用模式/" itemprop="url">
                   函数四种调用模式以及上下文模式
                 </a>
@@ -1065,134 +1193,6 @@
 <li>借用原生方法</li>
 </ul>
 </li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/04/绘制图像以及坐标轴的平移/" itemprop="url">
-                  绘制图像以及坐标轴的平移
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-04T13:27:07+08:00" content="2016-10-04">
-              2016-10-04
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="1-绘制图像drawImage"><a href="#1-绘制图像drawImage" class="headerlink" title="1. 绘制图像drawImage"></a>1. 绘制图像drawImage</h4><ul>
-<li>普通的渲染图像<ul>
-<li>ctx.drawImage(imgObj, x, y)</li>
-<li>在canvas的（x,y)位置上，渲染指定的imgObj图像</li>
-</ul>
-</li>
-<li>缩放绘制图像<ul>
-<li>ctx.drawImages(imgObj, x, y, width, height)</li>
-<li>在canvas的(x, y)位置上，根据指定的宽和高，来渲染imgObj图像</li>
-</ul>
-</li>
-<li>切片绘制图像<ul>
-<li>ctx.drawImage(imgObj, sx, sy, swidth, sheight, x, y, width, height)</li>
-<li>sx, sy, swidth, sheight : 在源图片上的sx，sy位置切片一个swidth宽、sheight高的图像。</li>
-<li>x, y, width, height ：将上一步切出来的图像绘制在canvas的x,y位置上，并且指定渲染的宽和高</li>
-</ul>
-</li>
-<li>尽量保持原图像的比例进行渲染图像。防止图像在渲染的时候发生变形。<h4 id="2-坐标系变换"><a href="#2-坐标系变换" class="headerlink" title="2. 坐标系变换"></a>2. 坐标系变换</h4></li>
-<li>ctx.translate(x, y) 平移坐标系<ul>
-<li>将坐标系的原点 平移到 指定的(x, y)这点。</li>
-</ul>
-</li>
-<li>ctx.rotate(radian)<ul>
-<li>以当前原点旋转坐标系到指定的弧度radian</li>
-<li>如果为负数，逆时针旋转</li>
-<li>如果为正数，顺时针旋转<h4 id="3-清除坐标系"><a href="#3-清除坐标系" class="headerlink" title="3. 清除坐标系"></a>3. 清除坐标系</h4></li>
-</ul>
-</li>
-<li>ctx.clearRect(x, y, w, h)<ul>
-<li>清除由x, y, w, h确定的矩形以内所有的图形。<h4 id="4-状态保存与恢复"><a href="#4-状态保存与恢复" class="headerlink" title="4. 状态保存与恢复"></a>4. 状态保存与恢复</h4></li>
-</ul>
-</li>
-<li>ctx.save() : 将上一次的状态保存起来</li>
-<li>ctx.restore(): 恢复最近一次保存的状态</li>
 </ul>
 
           
